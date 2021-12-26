@@ -30,53 +30,11 @@ import java.util.stream.Collectors;
 public class GummyCraft {
 	public static final String MODID = "gummycraft";
     private static final Logger LOGGER = LogManager.getLogger();
-//    private static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, MODID);
 
     public GummyCraft() {
     	
     	var bus = FMLJavaModLoadingContext.get().getModEventBus();
-    	
-//        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-//        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
-//        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-//        MinecraftForge.EVENT_BUS.register(this);
-        
         EntityInit.ENTITIES.register(bus);
         
     }
 }
-
-//    private void setup(final FMLCommonSetupEvent event)
-//    {
-//        LOGGER.info("HELLO FROM PREINIT");
-//        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-//    }
-//    
-//
-//    private void enqueueIMC(final InterModEnqueueEvent event)
-//    {
-//        InterModComms.sendTo("gummycraft", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
-//    }
-//
-//    private void processIMC(final InterModProcessEvent event)
-//    {
-//        LOGGER.info("Got IMC {}", event.getIMCStream().
-//                map(m->m.messageSupplier().get()).
-//                collect(Collectors.toList()));
-//    }
-//
-//    @SubscribeEvent
-//    public void onServerStarting(ServerStartingEvent event) {
-//        // do something when the server starts
-//        LOGGER.info("HELLO from server starting");
-//    }
-//
-//    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-//    public static class RegistryEvents {
-//        @SubscribeEvent
-//        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-//            // register a new block here
-//            LOGGER.info("HELLO from Register Block");
-//        }
-//    }
-//}
