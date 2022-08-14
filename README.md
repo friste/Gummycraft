@@ -1,4 +1,4 @@
-# GummyCraft
+# Gummycraft
 A Minecraft mod that adds a tamable orange corn snake named Gummy to the game. Tamed using raw rabbit.
 
 Gummy!
